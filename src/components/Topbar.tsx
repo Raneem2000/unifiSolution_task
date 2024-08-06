@@ -1,18 +1,87 @@
 import { RxHamburgerMenu } from 'react-icons/rx';
 import logo from '../assets/logo.png';
+import { FaFlag, FaUser } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 const Topbar = () => {
   return (
-    <div className="h-[80px] text-white bg-black flex items-center justify-between">
-      <img src={logo} className="w-20 h-20 ms-10 cursor-pointer" />
-      <ul className="hidden gap-8 items-center md:flex sm:hidden">
-        <li className="cursor-pointer hover:text-primary">Bikes</li>
-        <li className="cursor-pointer hover:text-primary">Blog</li>
-        <li className="cursor-pointer hover:text-primary">Login</li>
-        <li className="border border-primary p-1 rounded cursor-pointer hover:text-primary">
-          Signin
-        </li>
-      </ul>
-      <RxHamburgerMenu className="me-10 text-2xl text-white font-extrabold cursor-pointer" />
+    <div className="lg:flex justify-evenly items-center text-primary  bg-white h-[100px]">
+      <button
+        type="button"
+        className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+        aria-expanded="false"
+      >
+        <svg
+          className="h-5 w-5 flex-none text-gray-400"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            fillRule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+            clipRule="evenodd"
+          />
+        </svg>
+        <FaFlag />
+        العربية
+      </button>{' '}
+      <Link to={'/contact'}>تواصل معنا</Link>
+      <Link to={'/notes'}>المدونات</Link>
+      <Link to={'/notes'} className="flex items-center gap-x-1">
+        <svg
+          className="h-5 w-5 flex-none text-gray-400"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            fillRule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+            clipRule="evenodd"
+          />
+        </svg>
+        التوظيف والتدريب
+      </Link>
+      <Link to={'/form-joining'}>التقديم بالمعهد</Link>
+      <Link to={'/courses-special'}>كورسات ضباط الملاحة</Link>
+      <Link to={'/courses'} className="flex items-center gap-x-1">
+        <svg
+          className="h-5 w-5 flex-none text-gray-400"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            fillRule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+            clipRule="evenodd"
+          />
+        </svg>
+        كورسات
+      </Link>
+      <Link to={'/aboout'}>من نحن</Link>
+      <Link to={'/home'}>الرئيسية</Link>
+      <button
+        type="button"
+        className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+        aria-expanded="false"
+      >
+        <svg
+          className="h-5 w-5 flex-none text-gray-400"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            fillRule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+            clipRule="evenodd"
+          />
+        </svg>
+        محمد أحمد
+        <FaUser />
+      </button>
+      <img src={logo} alt="logo" />
     </div>
   );
 };

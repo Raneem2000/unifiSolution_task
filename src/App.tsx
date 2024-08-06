@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import Test from './Pages/Test';
+import Home from './Pages/Home';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Test />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </>
   );
